@@ -10,8 +10,8 @@ app = Flask(__name__)
 def index():
     title = "Forecast"
     weather = weather_by_city("Lausanne, Switzerland")
-    news = get_python_news()
-    return render_template('index.html', page_title=title, weather=weather, news=news)
+    news_list = get_python_news()
+    return render_template('index.html', page_title=title, weather=weather, news_list=news_list)
 
 
 if __name__ == '__main__':
